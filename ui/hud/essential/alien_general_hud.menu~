@@ -1,0 +1,347 @@
+#include "ui/menudef.h"
+
+// r3v:viracocha: HUD 
+// v3.0 GPL
+// alien itemDef
+
+{
+  
+	menuDef
+	{
+    		name "alien_general_hud"
+		fullScreen MENU_FALSE
+		visible MENU_TRUE
+		rect 0 0 640 480
+		
+	// text section
+	
+		// text 'level'
+		itemDef
+		{
+			text "level"
+			rect 10 448 10 10
+			visible 1
+			decoration
+			textalign 0
+			textscale .25
+			forecolor 1 1 1 .75
+		}
+
+		// text 'evo'
+		itemDef
+		{
+			text "evo"
+			rect 50 448 10 10
+			visible 1
+			decoration
+			textalign 0
+			textscale .25
+			forecolor 1 1 1 .75
+		}
+
+		// text 'hp'
+		itemDef
+		{
+			text "hp"
+			rect 315 448 10 10
+			visible 1
+			decoration
+			textalign 0
+			textscale .25
+			forecolor 1 1 1 .75
+		}
+		
+		// text 'wallwalk'
+		itemDef
+		{
+			text "wall"
+			rect 570 448 10 10
+			visible 1
+			decoration
+			textalign 0
+			textscale .25
+			forecolor 1 1 1 .75
+		}
+
+		// text 'boost'
+		itemDef
+		{
+			text "boost"
+			rect 605 448 10 10
+			visible 1
+			decoration
+			textalign 0
+			textscale .25
+			forecolor 1 1 1 .75
+		}
+		
+	// draw section
+
+		// health icon
+		itemDef
+		{
+			name "health"
+			rect 297 455 30 10
+			visible 1
+			decoration
+			forecolor 1 .5 0 1			
+			ownerdraw CG_PLAYER_HEALTH
+		}
+		// health bar left
+		itemDef
+		{
+			decoration
+			rect 320 465 -150 -10
+			visible 1
+			forecolor 1 1 1 .15
+			textScale 0
+			ownerdraw CG_PLAYER_HEALTH_BAR 
+		}
+		// health bar right
+		itemDef
+		{
+			decoration
+			rect 320 455 150 10 
+			visible 1
+			forecolor 1 1 1 .15
+			textScale 0
+			ownerdraw CG_PLAYER_HEALTH_BAR 
+		}
+
+		// crosshair icon
+		itemDef
+		{
+			rect 315 235 10 10 
+			visible 1 
+			decoration 
+			forecolor 1 .5 0 1
+			style WINDOW_STYLE_SHADER 
+			background "gfx/2d/crosshair-alien.tga"
+		}
+
+		// alien icon
+		itemDef
+		{
+			name "alien-icon"
+			rect 8 450 20 20
+			visible 1
+			decoration
+			//forecolor 0 1 0 .5
+			forecolor 1 .5 0 1
+			ownerdraw CG_PLAYER_WEAPONICON
+		}
+
+		// evo icon
+		itemDef
+		{
+			name "organs"
+			rect 49 455 10 10
+			visible 1
+			decoration
+			forecolor 1 .5 0 1
+			ownerdraw CG_PLAYER_CREDITS_VALUE_NOPAD
+		}
+
+		// wallwalk icon
+		itemDef
+		{
+			name "left-spikes"
+			rect 565.5 454 12 12
+			visible 1
+			decoration
+			forecolor 1 .5 0 1
+			background "ui/assets/backarrow.tga"
+			ownerdraw CG_PLAYER_WALLCLIMBING
+		}
+		itemDef
+		{
+			name "center-spikes"
+			rect 572 454 12 12
+			visible 1
+			decoration
+			forecolor 1 .5 0 1
+			background "gfx/2d/numbers/minus_32b.tga"
+			ownerdraw CG_PLAYER_WALLCLIMBING
+		}
+		itemDef
+		{
+			name "right-spikes"
+			rect 579.5 454 12 12
+			visible 1
+			decoration
+			forecolor 1 .5 0 1
+			background "ui/assets/forwardarrow.tga"
+			ownerdraw CG_PLAYER_WALLCLIMBING
+		}
+
+		// booster icon
+		itemDef
+		{
+			name "bolt"
+			rect 609 452 12 16
+			visible 1
+			decoration
+			forecolor 1 .5 0 1
+			background "ui/assets/alien/bolt.tga"
+			ownerdraw CG_PLAYER_BOOSTED
+		}
+		
+		// goon barbs icon
+		itemDef
+		{
+			name "barbs"
+			rect 315 245 10 30
+			visible 1
+			forecolor 1 1 1 1
+			background "ui/assets/alien/tremublob.tga"
+			ownerdraw CG_PLAYER_POISON_BARBS
+    		}
+
+	// info section		
+		
+		// alien radar
+		itemDef
+		{
+			name "aliensense"
+			rect 20 20 600 400
+			visible 1
+			decoration
+			ownerdraw CG_PLAYER_ALIEN_SENSE
+		}
+
+    		// stage kill
+		itemDef
+		{
+			name "stagekills"
+			rect 676 20 20 20
+			style WINDOW_STYLE_EMPTY
+			visible 1
+			decoration
+			forecolor 1 .5 0 1
+			textscale 0.25
+			align ITEM_ALIGN_RIGHT
+			textalignx .5
+			textaligny 0
+			ownerdraw CG_STAGE_REPORT_TEXT
+		}
+
+		// time
+		itemDef
+		{
+			name "timer"
+			rect 572 0 2 2
+			style WINDOW_STYLE_EMPTY
+			visible 1
+			decoration
+			forecolor 1 .5 0 1
+			align ITEM_ALIGN_RIGHT
+			textalignx 0
+			textaligny 20
+			textscale 0.25
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			ownerdraw CG_TIMER
+		}
+    
+		// ping (lagometer)
+		itemDef
+		{
+			name "lagometer"
+			rect 584 30 24 16
+			style WINDOW_STYLE_EMPTY
+			visible 1
+			decoration
+			forecolor 1 .5 0 1
+			textscale 0.25
+			textalignx 1
+			textaligny 0.5
+			ownerdraw CG_LAGOMETER
+		}
+		
+		// fps (lag)
+		itemDef
+		{
+			name "fps"
+      			rect 637 25 2 2
+		      	style WINDOW_STYLE_EMPTY
+		        visible 1
+      			decoration
+      			forecolor 1 .5 0 1
+			align ITEM_ALIGN_RIGHT
+			textalignx 0
+			textaligny 18
+		        textscale 0.25
+		        textstyle ITEM_TEXTSTYLE_NORMAL
+		        ownerdraw CG_FPS
+		}
+    
+		// console (chat)
+		itemDef
+		{
+			name "console"
+			rect 8 8 560 180
+			style WINDOW_STYLE_EMPTY
+			visible 1
+			decoration
+			forecolor 1 1 1 1
+			align ITEM_ALIGN_LEFT
+			textalignx 0
+			textaligny 18
+			textscale 0.25
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			ownerdraw CG_CONSOLE
+		}  
+    
+		// player name (team)
+		itemDef  
+		{  
+			name "playername"  
+			rect 200 248 240 22
+			visible 1  
+			decoration  
+			textScale .3
+			ownerdraw CG_PLAYER_CROSSHAIRNAMES
+		}
+    
+  
+		// demo recording
+		itemDef
+		{
+			name "demoRecording"
+			rect 614 108 8 8
+			style WINDOW_STYLE_EMPTY
+			visible 1
+			decoration
+			forecolor 0 0 0 1
+			textscale 0.25
+			textalignx 1
+			textaligny 0.5
+			ownerdraw CG_DEMO_RECORDING
+			background "ui/assets/neutral/circle.tga"
+		}   
+		// demo playback
+		itemDef
+		{
+			name "demoPlayback"
+			rect 614 108 8 8
+			style WINDOW_STYLE_EMPTY
+			visible 1
+			decoration
+			forecolor 0 0 0 1
+			textscale 0.25
+			textalignx 1
+			textaligny 0.5
+			ownerdraw CG_DEMO_PLAYBACK
+			background "ui/assets/forwardarrow.tga"
+		}
+
+		// select class (alien)
+		itemDef
+		{
+			name "select"
+			rect 240 435 160 32
+			visible 0
+			decoration
+			ownerdraw CG_PLAYER_SELECT
+		}
+	}
+}

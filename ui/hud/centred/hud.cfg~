@@ -1,0 +1,12 @@
+#ifdef ALIGN_LEFT
+#include "ui/hud/centred/svn/hud.cfg"
+#else
+{
+  loadMenu { "ui/hud/centred/human_hud.menu" }
+  loadMenu { "ui/hud/centred/alien_builder_hud.menu" }
+  loadMenu { "ui/hud/centred/alien_general_hud.menu" }
+  loadMenu { "ui/hud/common/spectator_hud.menu"}
+
+  loadMenu { "ui/hud/common/teamscore.menu" }
+  loadMenu { "ui/hud/common/loading.menu" }
+}#endif

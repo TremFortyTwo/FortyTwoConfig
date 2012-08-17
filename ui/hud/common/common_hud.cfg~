@@ -1,0 +1,275 @@
+#define BORDER    10
+
+#define STAT_W    45
+#define STAT_H    22
+#define STAT_X    (W-(BORDER+STAT_W))
+
+#define CONSOLE_W (W-((3*BORDER)+STAT_W))
+#define CONSOLE_H 180
+#define MAIN_W    (W-(2*BORDER))
+
+#ifdef ALIGN_LEFT
+	#define ITEM_ALIGN_LEFT ALIGN_LEFT
+	#define ITEM_ALIGN_RIGHT ALIGN_RIGHT
+	#define ITEM_ALIGN_CENTER ALIGN_CENTER
+	#define autowrapped wrapped
+#endif
+
+   //CONSOLE SMALL
+    itemDef
+    {
+      name "console"
+      rect 4 0 400 130
+      style WINDOW_STYLE_EMPTY
+      visible 1
+	  cvartest oticz_chatFont
+	  showCvar { small }
+      decoration
+      forecolor 1.0 1.0 1.0 1.0
+      align ITEM_ALIGN_LEFT
+      textalignx 0
+      textaligny 18
+      textscale 0.25
+      textstyle ITEM_TEXTSTYLE_NORMAL
+      ownerdraw CG_CONSOLE
+    }
+    
+    //CONSOLE DEFAULT
+    itemDef
+    {
+      name "console"
+      rect 8 8 560 180
+      style WINDOW_STYLE_EMPTY
+      visible 1
+	  cvartest oticz_chatFont
+	  showCvar { default }
+      decoration
+      forecolor 1 1 1 1
+      align ITEM_ALIGN_LEFT
+      textalignx 0
+      textaligny 18
+      textscale 0.4
+      textstyle ITEM_TEXTSTYLE_NORMAL
+      ownerdraw CG_CONSOLE
+    }  
+
+    //TUTORIAL
+    itemDef
+    {
+      name "tutorial"
+      rect 8 250 640 180
+      style WINDOW_STYLE_EMPTY
+      visible 1
+      decoration
+      forecolor 1.0 1.0 1.0 0.35
+      textalign ITEM_ALIGN_LEFT
+      textalignx 0
+      textaligny 18
+      textscale 0.3
+      textstyle ITEM_TEXTSTYLE_NORMAL
+      ownerdraw CG_TUTORIAL
+    }  
+
+    //FPS
+    itemDef
+    {
+      name "fps"
+      rect 542 455 56 22
+      style WINDOW_STYLE_EMPTY
+      visible 1
+	  cvartest cg_lagometer
+	  showCvar { 1 }
+      decoration
+      forecolor 0.5 0.5 0.5 1.0
+      align ITEM_ALIGN_RIGHT
+      textalignx 0
+      textaligny 18
+      textscale 0.3
+      textstyle ITEM_TEXTSTYLE_NORMAL
+      ownerdraw CG_FPS
+    } 
+
+    //FPS
+    itemDef
+    {
+      name "fps"
+      rect 579 455 56 22
+      style WINDOW_STYLE_EMPTY
+      visible 1
+	  cvartest cg_lagometer
+	  showCvar { 0 }
+      decoration
+      forecolor 0.5 0.5 0.5 1.0
+      align ITEM_ALIGN_RIGHT
+      textalignx 0
+      textaligny 18
+      textscale 0.3
+      textstyle ITEM_TEXTSTYLE_NORMAL
+      ownerdraw CG_FPS
+    } 
+
+      //TIMER
+    itemDef
+    {
+      name "timer"
+      rect 513 453 80 25
+      style WINDOW_STYLE_EMPTY
+      visible 1
+	  cvartest cg_lagometer
+	  showCvar { 1 }
+      decoration
+      forecolor 0.5 0.5 0.5 1.0
+      align ITEM_ALIGN_CENTER
+      textalignx 0
+      textaligny 20
+      textscale 0.3
+      textstyle ITEM_TEXTSTYLE_NORMAL
+      ownerdraw CG_TIMER
+    } 
+
+      //TIMER
+    itemDef
+    {
+      name "timer"
+      rect 550 453 80 25
+      style WINDOW_STYLE_EMPTY
+      visible 1
+	  cvartest cg_lagometer
+	  showCvar { 0 }
+      decoration
+      forecolor 0.5 0.5 0.5 1.0
+      align ITEM_ALIGN_CENTER
+      textalignx 0
+      textaligny 20
+      textscale 0.3
+      textstyle ITEM_TEXTSTYLE_NORMAL
+      ownerdraw CG_TIMER
+    } 
+
+    //LAGOMETER
+    itemDef
+    {
+      name "lagometer"
+      rect 602 455 32 20
+      style WINDOW_STYLE_EMPTY
+      visible 1
+      decoration
+      forecolor 0.5 0.5 0.5 1.0
+      textscale 0.3
+      textalignx 1
+      textaligny 0.5
+      ownerdraw CG_LAGOMETER
+    }
+
+    //DEMO STATE
+    itemDef
+    {
+      name "demoRecording"
+      rect 510 459 16 16
+      style WINDOW_STYLE_EMPTY
+      visible 1
+	  cvartest cg_lagometer
+	  showCvar { 1 }
+      decoration
+      forecolor 0.5 0.5 0.5 0.8
+      textscale 0.3
+      textalignx 1
+      textaligny 0.5
+      ownerdraw CG_DEMO_RECORDING
+      background "ui/assets/forwardarrow.tga"
+    }  
+    itemDef
+    {
+      name "demoPlayback"
+      rect 510 459 16 16
+      style WINDOW_STYLE_EMPTY
+      visible 1
+	  cvartest cg_lagometer
+	  showCvar { 1 }
+      decoration
+      forecolor 0.5 0.5 0.5 0.8
+      textscale 0.3
+      textalignx 1
+      textaligny 0.5
+      ownerdraw CG_DEMO_PLAYBACK
+      background "ui/assets/forwardarrow.tga"
+    }  
+
+    //DEMO STATE
+    itemDef
+    {
+      name "demoRecording"
+      rect 547 459 16 16
+      style WINDOW_STYLE_EMPTY
+      visible 1
+	  cvartest cg_lagometer
+	  showCvar { 0 }
+      decoration
+      forecolor 0.5 0.5 0.5 0.8
+      textscale 0.3
+      textalignx 1
+      textaligny 0.5
+      ownerdraw CG_DEMO_RECORDING
+      background "ui/assets/forwardarrow.tga"
+    }  
+    itemDef
+    {
+      name "demoPlayback"
+      rect 547 459 16 16
+      style WINDOW_STYLE_EMPTY
+      visible 1
+	  cvartest cg_lagometer
+	  showCvar { 0 }
+      decoration
+      forecolor 0.5 0.5 0.5 0.8
+      textscale 0.3
+      textalignx 1
+      textaligny 0.5
+      ownerdraw CG_DEMO_PLAYBACK
+      background "ui/assets/forwardarrow.tga"
+    }  
+
+
+    //SNAPSHOT
+    itemDef
+    {
+      name "snapshot"
+      rect 8 196 200 22
+      style WINDOW_STYLE_EMPTY
+      visible 1
+      decoration
+      forecolor 1.0 1.0 1.0 1.0
+      align ITEM_ALIGN_RIGHT
+      textalignx 0
+      textaligny 18
+      textscale 0.4
+      textstyle ITEM_TEXTSTYLE_NORMAL
+      ownerdraw CG_SNAPSHOT
+    }
+
+    //PLAYER NAME
+    itemDef  
+    {  
+      name "playername"  
+      rect 200 248 240 22
+      visible 1  
+      decoration  
+      textScale .3
+      ownerdraw CG_PLAYER_CROSSHAIRNAMES
+    }
+
+    //STAGE COUNTER
+    itemDef
+    {
+	name "stagecounter"
+	align ITEM_ALIGN_LEFT
+	textscale 0.3
+	textaligny 20
+	rect 6 455 300 20
+	forecolor 0.5 0.5 0.5 1.0
+	decoration
+	visible 1
+	  cvartest oticz_stageCounter
+	  showCvar { 1 }
+	ownerdraw CG_STAGE_REPORT_TEXT
+    }

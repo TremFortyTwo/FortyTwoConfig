@@ -1,0 +1,21 @@
+#include "ui/menudef.h"
+#ifdef ALIGN_LEFT
+	#define ITEM_ALIGN_LEFT ALIGN_LEFT
+	#define ITEM_ALIGN_RIGHT ALIGN_RIGHT
+	#define ITEM_ALIGN_CENTER ALIGN_CENTER
+	#define autowrapped wrapped
+#endif
+
+{
+  menuDef
+  {
+    name "default_hud"
+    fullScreen MENU_FALSE
+    visible MENU_TRUE
+    rect 0 0 640 480
+ 
+#include "ui/hud/common/common.cfg"
+#include "ui/hud/common/chatmenu_spec.cfg"
+
+  }
+}

@@ -1,0 +1,11 @@
+// hud menu defs
+// 
+{
+  loadMenu { "ui/hud/highvis/human_hud.menu" }
+  loadMenu { "ui/hud/highvis/alien_builder_hud.menu" }
+  loadMenu { "ui/hud/highvis/alien_general_hud.menu" }
+  loadMenu { "ui/hud/common/spectator_hud.menu"}
+
+  loadMenu { "ui/hud/common/teamscore.menu" }
+  loadMenu { "ui/hud/common/loading.menu" }
+}

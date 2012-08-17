@@ -1,0 +1,103 @@
+seta n1 ""
+seta n2 ""
+seta n3 ""
+seta n4 ""
+seta n5 ""
+seta n6 ""
+seta n7 ""
+seta n8 ""
+seta n9 ""
+seta n0 ""
+seta n- ""
+seta n= ""
+
+bind "1" vstr n1
+bind "2" vstr n2
+bind "3" vstr n3
+bind "4" vstr n4
+bind "5" vstr n5
+bind "6" vstr n6
+bind "7" vstr n7
+bind "8" vstr n8
+bind "9" vstr n9
+bind "0" vstr n0
+bind "-" vstr n-
+bind "=" vstr n=
+bind "BACKSPACE" "vstr menu0"
+
+seta m0n1 "vstr menu1"			//Buy/Evolve
+seta m0n2 "vstr menu2"			//Response
+seta m0n3 "vstr menu3"			//Order
+seta m0n4 "vstr menu4"			//Build
+seta m0n5 "vstr menu5"			//Settings
+seta menu0 "set n1 vstr m0n1; set n2 vstr m0n2; set n3 vstr m0n3; set n4 vstr m0n4;set n5 vstr m0n5;set n6 -1;set n7 -1;set n8 -1;set n9 -1;set n0 -1;set n- -1;set n= -1;set oticz_chatMenu 0"
+
+seta m1k1 "sell weapons;buy ackit; buy ckit;itemact ackit;itemact ckit;class level0"
+seta m1k2 "sell weapons;sell upgrades;buy rifle;itemact rifle;class level1"
+seta m1k3 "sell weapons;sell upgrades;buy helmet;buy larmour;buy psaw;itemact psaw;class level1upg"
+seta m1k4 "sell weapons;sell upgrades;buy helmet;buy larmour;buy shotgun;itemact shotgun;class level2"
+seta m1k5 "sell weapons;sell upgrades;buy helmet;buy larmour;buy lgun;itemact lgun;buy battpack;class level2upg"
+seta m1k6 "sell weapons;sell upgrades;buy helmet;buy larmour;buy mdriver;itemact mdriver;buy battpack;class level3"
+seta m1k7 "sell weapons;sell upgrades;buy helmet;buy larmour;buy chaingun;itemact chaingun;class level3upg"
+seta m1k8 "sell weapons;sell upgrades;buy helmet;buy larmour;buy prifle;itemact prifle;buy battpack;class level4"
+seta m1k9 "sell weapons;sell upgrades;buy helmet;buy larmour;buy flamer;itemact flamer"
+seta m1k0 "sell weapons;sell upgrades;buy helmet;buy larmour;buy lcannon;itemact lcannon;buy battpack"
+seta m1k- "sell battpack;buy helmet;buy larmour;buy jetpack"
+seta m1k= "sell larmour; sell helmet; sell battpack; sell jetpack; buy bsuit"
+
+seta menu1 "set n1 vstr m1n1;set n2 vstr m1n2;set n3 vstr m1n3;set n4 vstr m1n4;set n5 vstr m1n5;set n6 vstr m1n6;set n7 vstr m1n7;set n8 vstr m1n8;set n9 vstr m1n9;set n0 vstr m1n0;set oticz_chatMenu 1"
+
+seta m2k1 "say_team Yes"
+seta m2k2 "say_team No"
+seta m2k3 "say_team Thanks!"
+seta m2k4 "say_team Sorry!"
+seta m2k5 "say_team Oops"
+seta m2k6 "say_team I'm attacking"
+seta m2k7 "say_team I'm defending"
+seta m2k8 "say_team I'm building"
+seta m2k9 "say_team Grenade!"
+seta m2k0 "say_team Incoming!"
+seta m2k- "say_team Flank!"
+seta m2k= "say_team Where to?"
+
+seta menu2 "set n1 vstr m2n1;set n2 vstr m2n2;set n3 vstr m2n3;set n4 vstr m2n4;set n5 vstr m2n5;set n6 vstr m2n6;set n7 vstr m2n7;set n8 vstr m2n8;set n9 vstr m2n9;set n0 vstr m2n0;set n- vstr m2n-;set n= vstr m2n=;set oticz_chatMenu 2"
+
+seta m3k1 "say_team I need backup!"
+seta m3k2 "say_team We need builders!"
+seta m3k3 "say_team We need spawns!"
+seta m3k4 "say_team We need to regroup!"
+seta m3k5 "say_team Follow me!"
+seta m3k6 "say_team Attack!"
+seta m3k7 "say_team Defend our base!"
+seta m3k8 "say_team Stay alive!"
+seta m3k9 "say_team Hold back!"
+seta m3k0 "say_team Clear the path!!"
+seta m3k- "say_team Enemy spawns down"
+seta m3k= "say_team Enemy OM/RC down"
+
+seta menu3 "set n1 vstr m3n1;set n2 vstr m3n2;set n3 vstr m3n3;set n4 vstr m3n4;set n5 vstr m3n5;set n6 vstr m3n6;set n7 vstr m3n7;set n8 vstr m3n8;set n9 vstr m3n9;set n0 vstr m3n0;set n- vstr m3n-;set n= vstr m3n=;set oticz_chatMenu 3"
+
+seta m4k1 "build telenode; build eggpod"
+seta m4k2 "build reactor; build overmind"
+seta m4k3 "build arm; build booster"
+seta m4k4 "build mgturret; build acid_tube"
+seta m4k5 "build medistat; build trapper"
+seta m4k6 "build dcc; build hive"
+seta m4k7 "build tesla; build barricade"
+seta m4k8 "build repeater; build hovel"
+seta m4k9 ""
+seta m4k0 ""
+seta m4n- ""
+seta m4n= ""
+
+seta menu4 "set n1 vstr m4n1;set n2 vstr m4n2;set n3 vstr m4n3;set n4 vstr m4n4;set n5 vstr m4n5;set n6 vstr m4n6;set n7 vstr m4n7;set n8 vstr m4n8;set n9 vstr m4n9;set n0 vstr m4n0;set oticz_chatMenu 4"
+
+seta oticz_chatMenu 1
+seta oticz_chatMenuO 1
+seta cg_tutorial 0
+
+toggleconsole
+echo "^1In order for chat menus to work properly you must disable any binds that use the number row (1 to =) in your binds cfg"
+echo "^7In order to use Chat Menus, you must bind a key to open the menu"
+echo "^7Typing ^3/bind v vstr chatmenu ^7into console will make v the menu key"
+

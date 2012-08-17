@@ -1,0 +1,18 @@
+#include "ui/menudef.h"
+
+{
+
+#define W         640
+#define H         480
+#define CROSSHAIRVISABLE 1
+
+  menuDef
+  {
+    name "alien_general_hud"
+    fullScreen MENU_FALSE
+    visible MENU_TRUE
+    rect 0 0 W H
+#include "ui/hud/essential/alien_common_hud.cfg"
+
+  }
+}

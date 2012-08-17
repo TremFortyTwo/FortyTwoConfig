@@ -1,0 +1,175 @@
+    //ALIEN TEAM OVERLAY LABEL
+	itemDef
+	{
+	  name "human overlay label"
+	  text "Status      Name                            Kills"
+	  textscale 0.25	
+	  rect 472 15 160 10 
+	  textalign 0		
+	  textalignx 0
+	  textaligny 0        
+	  backcolor COMMON_GREY_R COMMON_GREY_G COMMON_GREY_B COMMON_GREY_A
+	  forecolor COMMON_GREY_R COMMON_GREY_G COMMON_GREY_B COMMON_GREY_A
+	  decoration
+	  visible 1
+	  cvartest cg_drawTeamOverlay
+      showCvar{1}
+	  hideCvar{0}
+	}
+
+    //ALIEN TEAM OVERLAY LINE SEPARATOR
+	itemDef
+	{
+	  name "overlay line"
+	  rect 465 20 220 0
+	  border 1
+      bordercolor COMMON_GREY_R COMMON_GREY_G COMMON_GREY_B COMMON_GREY_A
+	  visible 1
+	  decoration
+	  cvartest cg_drawTeamOverlay
+      showCvar{1}
+	  hideCvar{0}
+	}
+
+#ifdef ALIGN_LEFT
+    //ALIEN TEAM OVERLAY STATS
+	itemDef 
+    {
+      //name "human overlay"
+      rect 465 22 210 80 	 	     
+	  backcolor COMMON_GREY_R COMMON_GREY_G COMMON_GREY_B COMMON_GREY_A
+	  forecolor COMMON_WHITE_R COMMON_WHITE_G COMMON_WHITE_B COMMON_WHITE_A
+      visible 1
+      type ITEM_TYPE_LISTBOX
+      elementwidth 10
+      elementheight 10
+      textscale 0.20
+      elementtype LISTBOX_TEXT
+      feeder FEEDER_ALIENTEAM_LIST
+      notselectable
+	  cvartest cg_drawTeamOverlay
+      showCvar{1}
+	  hideCvar{0}
+      columns 5
+        1   10  ITEM_ALIGN_LEFT
+        12  10  ITEM_ALIGN_LEFT
+        7   10  ITEM_ALIGN_LEFT
+        45  10  ITEM_ALIGN_LEFT
+        145 10  ITEM_ALIGN_RIGHT	
+    }
+#else
+    //ALIEN TEAM OVERLAY STATS
+	itemDef 
+    {
+      //name "human overlay"
+      rect 465 22 210 80 	 	     
+	  backcolor COMMON_GREY_R COMMON_GREY_G COMMON_GREY_B COMMON_GREY_A
+	  forecolor COMMON_WHITE_R COMMON_WHITE_G COMMON_WHITE_B COMMON_WHITE_A
+      visible 1
+      type ITEM_TYPE_LISTBOX
+      elementwidth 10
+      elementheight 10
+      textscale 0.20
+      elementtype LISTBOX_TEXT
+      feeder FEEDER_ALIENTEAM_LIST
+      notselectable
+	  cvartest cg_drawTeamOverlay
+      showCvar{1}
+	  hideCvar{0}
+      columns 5
+        1   10  1   ITEM_ALIGN_LEFT
+        12  10  1   ITEM_ALIGN_LEFT
+        7   10  5   ITEM_ALIGN_LEFT
+        45  10 24   ITEM_ALIGN_LEFT
+        145 10  3   ITEM_ALIGN_RIGHT	
+    }
+#endif
+
+ // Crosshair
+    itemDef
+    {
+      name "xhairred"
+      rect 312 232 16 16
+      visible CROSSHAIRVISABLE
+      	  cvartest oticz_alienXhairs
+	  showCvar { 1 }
+      decoration
+      forecolor MINIMAL_RED_R MINIMAL_RED_G MINIMAL_RED_B MINIMAL_RED_A
+      style WINDOW_STYLE_SHADER
+      background "gfx/2d/crosshair-alien.tga"
+    }
+    itemDef
+    {
+      name "xhairblue"
+      rect 312 232 16 16
+      visible CROSSHAIRVISABLE
+      	  cvartest oticz_alienXhairs
+	  showCvar { 2 }
+      decoration
+      forecolor 0 0.015686275 1 1
+      style WINDOW_STYLE_SHADER
+      background "gfx/2d/crosshair-alien.tga"
+    }
+    itemDef
+    {
+      name "xhairpurple"
+      rect 312 232 16 16
+      visible CROSSHAIRVISABLE
+      	  cvartest oticz_alienXhairs
+	  showCvar { 3 }
+      decoration
+      forecolor 1 0 0.97254902 1
+      style WINDOW_STYLE_SHADER
+      background "gfx/2d/crosshair-alien.tga"
+    }
+    itemDef
+    {
+      name "xhairblack"
+      rect 312 232 16 16
+      visible CROSSHAIRVISABLE
+      	  cvartest oticz_alienXhairs
+	  showCvar { 4 }
+      decoration
+      forecolor COMMON_BLACK_R COMMON_BLACK_G COMMON_BLACK_B COMMON_BLACK_A
+      style WINDOW_STYLE_SHADER
+      background "gfx/2d/crosshair-alien.tga"
+    }
+
+    itemDef
+    {
+      name "xhairgreen"
+      rect 312 232 16 16
+      visible CROSSHAIRVISABLE
+      	  cvartest oticz_alienXhairs
+	  showCvar { 5 }
+      decoration
+      forecolor MINIMAL_GREEN_R MINIMAL_GREEN_G MINIMAL_GREEN_B MINIMAL_GREEN_A
+      style WINDOW_STYLE_SHADER
+      background "gfx/2d/crosshair-alien.tga"
+    }
+
+    //BLOB CENTER
+    itemDef
+    {
+      name "blob"
+      rect 311 252 18 60
+      visible 1
+	  cvartest oticz_blobLocation
+	  showCvar { center }
+      forecolor COMMON_GREY_R COMMON_GREY_G COMMON_GREY_B COMMON_GREY_A
+      background "ui/assets/alien/tremublob.tga"
+      ownerdraw CG_PLAYER_POISON_BARBS
+    }
+
+    //BLOB RIGHT
+    itemDef
+    {
+      name "blob"
+      rect 619 RIGHT_BLOB_HEIGHT 18 60
+      visible 1
+	  cvartest oticz_blobLocation
+	  showCvar { right }
+      forecolor COMMON_GREY_R COMMON_GREY_G COMMON_GREY_B COMMON_GREY_A
+      background "ui/assets/alien/tremublob.tga"
+      ownerdraw CG_PLAYER_POISON_BARBS
+    }
